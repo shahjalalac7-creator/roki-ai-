@@ -10,10 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 18
 
@@ -21,15 +21,15 @@ jobs:
         run: npm install
 
       - name: Setup Java JDK
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           distribution: 'zulu'
           java-version: '17'
 
       - name: Setup Android SDK
-        uses: android-actions/setup-android@v2
+        uses: android-actions/setup-android@v3
 
-      - name: Build Android App (Prebuild & Gradle Build)
+      - name: Build Android App
         run: |
           npx expo prebuild --platform android
           cd android
@@ -37,7 +37,8 @@ jobs:
           ./gradlew assembleRelease
 
       - name: Upload APK Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: Roki-AI-APK
           path: android/app/build/outputs/apk/release/app-release.apk
+
