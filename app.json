@@ -4,22 +4,13 @@
     "slug": "roki-ai",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "dark",
-    "splash": {
-      "resizeMode": "contain",
-      "backgroundColor": "#0d0d0d"
-    },
+    "userInterfaceStyle": "light",
     "android": {
+      "package": "com.roki.ai",
       "adaptiveIcon": {
-        "backgroundColor": "#0d0d0d"
-      },
-      "package": "com.shahjalal.rokiai",
-      "permissions": [
-        "RECORD_AUDIO",
-        "SYSTEM_ALERT_WINDOW",
-        "FOREGROUND_SERVICE"
-      ]
+        "backgroundColor": "#ffffff"
+      }
     }
   }
 }
+
