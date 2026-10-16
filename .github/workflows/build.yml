@@ -1,3 +1,4 @@
+
 name: Build Android APK
 
 on:
@@ -15,10 +16,12 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
 
       - name: Install dependencies
-        run: npm install
+        run: |
+          npm install
+          npm install -g eas-cli
 
       - name: Setup Java JDK
         uses: actions/setup-java@v4
@@ -41,4 +44,5 @@ jobs:
         with:
           name: Roki-AI-APK
           path: android/app/build/outputs/apk/release/app-release.apk
+
 
