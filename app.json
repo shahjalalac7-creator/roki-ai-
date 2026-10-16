@@ -1,3 +1,4 @@
+
 {
   "expo": {
     "name": "Roki AI",
@@ -6,10 +7,7 @@
     "orientation": "portrait",
     "userInterfaceStyle": "light",
     "android": {
-      "package": "com.roki.ai",
-      "adaptiveIcon": {
-        "backgroundColor": "#ffffff"
-      }
+      "package": "com.roki.ai"
     }
   }
 }
